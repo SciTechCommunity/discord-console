@@ -1,0 +1,62 @@
+#ifndef DEPENDS
+#define DEPENDS
+#include <QtCore>
+#include <QtCoreDepends>
+#include <QtNetwork>
+#include <QtNetworkDepends>
+#include <QtConcurrent>
+#include <QtConcurrentDepends>
+#include <QtWebSockets>
+#include <QtWebSocketsDepends>
+#include <QtScript>
+#include <QtScriptDepends>
+#include <random>
+
+namespace qt {
+using core = QCoreApplication;
+using object = QObject;
+using string = QString;
+using stringlist = QStringList;
+using stringstream = QTextStream;
+using regex = QRegularExpression;
+using timer = QTimer;
+using bytes = QByteArray;
+using var = QVariant;
+
+template <typename T>
+using list = QList<T>;
+template <typename T>
+using vector = QVector<T>;
+template <typename T>
+using liskedlist = QLinkedList<T>;
+template <typename T>
+using array = QVarLengthArray<T>;
+template<typename K, typename V>
+using map = QMap<K,V>;
+template<typename K, typename V>
+using hash = QHash<K,V>;
+
+namespace net {
+using reply = QNetworkReply;
+using request = QNetworkRequest;
+using manager = QNetworkAccessManager;
+using socket = QAbstractSocket;
+using websocket = QWebSocket;
+using tcpsocket = QTcpSocket;
+using udpsocket = QUdpSocket;
+}
+
+namespace json {
+using doc = QJsonDocument;
+using arr = QJsonArray;
+using obj = QJsonObject;
+using var = QJsonValue;
+}
+
+namespace script {
+using engine = QScriptEngine;
+using agent = QScriptEngineAgent;
+using var = QScriptValue;
+}
+}
+#endif
